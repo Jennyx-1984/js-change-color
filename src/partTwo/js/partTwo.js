@@ -2,15 +2,7 @@
 let isDark = false;
 function changeColor(){
     isDark = !isDark;
-    /*const color = isDark ? "darkblue" : "red";
-
-    const background = document.getElementById("background");
-    if (background) {
-        background.style.backgroundColor = color; // Para test
-    } else {
-        document.body.style.backgroundColor = color; // Para web real
-    }*/
-   const element = document.getElementById("background") ?? document.body;
+    const element = document.getElementById("background") ?? document.body;
     element.classList.toggle("dark-mode", isDark);
     element.style.backgroundColor = isDark ? "darkblue" : "red";
 };
